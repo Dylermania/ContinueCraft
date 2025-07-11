@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(240, 10%, 3.9%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215, 16%, 47%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(240, 10%, 3.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(240, 10%, 3.9%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(240, 10%, 3.9%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(240, 10%, 3.9%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(215, 20%, 65%);
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  
+  /* CompatHub Custom Colors */
+  --compatHub-slate-900: hsl(222, 84%, 4.9%);
+  --compatHub-slate-800: hsl(222, 47%, 11%);
+  --compatHub-slate-700: hsl(215, 28%, 17%);
+  --compatHub-slate-600: hsl(215, 20%, 27%);
+  --compatHub-slate-500: hsl(215, 16%, 47%);
+  --compatHub-slate-400: hsl(215, 20%, 65%);
+  --compatHub-slate-300: hsl(215, 28%, 82%);
+  --compatHub-indigo-500: hsl(231, 48%, 48%);
+  --compatHub-violet-500: hsl(258, 90%, 66%);
+  --compatHub-cyan-500: hsl(188, 94%, 42%);
+  --compatHub-emerald-500: hsl(160, 84%, 39%);
+  --compatHub-orange-500: hsl(25, 95%, 53%);
+  --compatHub-red-500: hsl(0, 84%, 60%);
+  --compatHub-yellow-500: hsl(48, 96%, 53%);
+  --compatHub-pink-500: hsl(330, 81%, 60%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    min-height: 100vh;
+  }
+
+  body:not(.dark) {
+    background: linear-gradient(135deg, hsl(210, 40%, 98%) 0%, hsl(214, 32%, 94%) 50%, hsl(220, 14%, 91%) 100%);
+  }
+
+  body.dark {
+    background: linear-gradient(135deg, hsl(222, 84%, 4.9%) 0%, hsl(222, 47%, 11%) 50%, hsl(215, 28%, 17%) 100%);
+  }
+}
+
+@layer components {
+  .glassmorphism {
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+  }
+  
+  body:not(.dark) .glassmorphism {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(30, 41, 59, 0.1);
+  }
+  
+  body.dark .glassmorphism {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+  }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, hsl(222, 84%, 4.9%) 0%, hsl(222, 47%, 11%) 50%, hsl(215, 28%, 17%) 100%);
+  }
+
+  .animated-gradient {
+    background: linear-gradient(-45deg, hsl(231, 48%, 48%), hsl(258, 90%, 66%), hsl(188, 94%, 42%), hsl(160, 84%, 39%));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+
+  .nav-item.active {
+    background: rgba(99, 102, 241, 0.1);
+  }
+
+  .screen {
+    animation: slideUp 0.3s ease-out;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-10px); 
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); 
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.6); 
+  }
+}
+
+@keyframes slideUp {
+  from { 
+    transform: translateY(20px); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+
+@keyframes gradient {
+  0% { 
+    background-position: 0% 50%; 
+  }
+  50% { 
+    background-position: 100% 50%; 
+  }
+  100% { 
+    background-position: 0% 50%; 
+  }
+}
