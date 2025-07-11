@@ -1,0 +1,109 @@
+Missing Name Report card page for Missing Name
+
+Your manifest description is missing.
+
+Share score
+
+Last tested seconds ago
+
+retest site
+Package For Stores
+
+Download Test Package
+
+Available stores:
+
+WindowsiOSAndroidMeta Quest
+Action Items
+invalid result icon
+5
+
+yield result icon
+21
+
+enhancement result icon
+8
+
+app capability result icon
+Create a custom protocol_handler
+
+info symbol, additional information available on hover
+app capability result icon
+Be a share_target for your users
+
+info symbol, additional information available on hover
+app capability result icon
+Add contextual shortcuts to specific parts of your app
+
+info symbol, additional information available on hover
+app capability result icon
+Increase reach with widgets
+
+info symbol, additional information available on hover
+yield result icon
+Ensure user actions and content is always in sync even if network connection is lost with background sync
+
+info symbol, additional information available on hover
+
+inactive dotinactive dotinactive dotinactive dotactive dotinactive dotinactive dotinactive dot
+
+Action Items Page 5 of 8
+Manifest
+PWABuilder has analyzed your site and did not find a Web Manifest. Use our Manifest Editor to generate one. You can package for the store once you have a valid manifest.
+
+Edit Your Manifest
+Manifest Documentation
+
+arrow
+
+Service Worker
+PWABuilder has analyzed your site and did not find a Service Worker. Having a Service Worker is highly recommended by PWABuilder as it enables an array of features that can enhance your PWA. You can generate a Service Worker below or use our documentation to make your own.
+
+Has Service Worker icon
+Has Service Worker
+
+Background Sync icon
+Background Sync
+
+Periodic Sync icon
+Periodic Sync
+
+Push Notifications icon
+Push Notifications
+
+Offline Support icon
+Offline Support
+
+Generate Service Worker
+Service Worker Documentation
+
+arrow
+App Capabilities
+PWABuilder has analyzed your PWA and has identified some app capabilities that could enhance your PWA
+
+Display Override icon
+Display Override
+
+Edge Side Panel icon
+Edge Side Panel
+
+File Handlers icon
+File Handlers
+
+Handle Links icon
+Handle Links
+
+Protocol Handlers icon
+Protocol Handlers
+
+Share Target icon
+Share Target
+
+Shortcuts icon
+Shortcuts
+
+Widgets icon
+Widgets
+
+App Capabilities documentation
+

@@ -1,0 +1,109 @@
+🎨 CompatHub – Full UI Blueprint
+This blueprint will cover each feature's screen, what UI components go there, and how the flow works. Designed for mobile (Android-first, React Native + Expo).
+
+🧭 Navigation Flow
+mathematica
+Copy code
+Splash → Home → Scan Device → Select App → Compatibility Results
+    ↳ [If Incompatible] → Emulation Options / Patch APK / Cloud Run
+    ↳ [If Compatible] → Direct Install or Launch in Container
+🖼️ SCREEN 1: Splash Screen
+Purpose: Show logo, name, and load the app
+
+Element	Type	Description
+Logo	Image	CompatHub logo (animated pulse)
+Tagline	Text	“Run what your phone says you can’t.”
+Loading bar	Activity	Shows loading progress
+BG Effect	Visual	Glassmorphism with particles
+
+🖼️ SCREEN 2: Home Screen
+Purpose: Main dashboard
+
+Element	Type	Description
+Welcome Message	Text	“Hello Nathan 👋 Ready to test an app?”
+Button: Scan Device	Primary Btn	Takes you to spec scan
+Button: Check App	Secondary Btn	Takes you to app select screen
+Button: My Apps	Link Btn	View apps already scanned
+Footer Tabs	Nav Bar	Home
+
+🖼️ SCREEN 3: Scan Device
+Purpose: Auto-check your phone’s specs
+
+Element	Type	Example Output
+OS Version	Text	Android 10 (API 29)
+CPU Architecture	Text	arm64-v8a
+RAM	Text	2.5 GB
+GPU	Text	Adreno 610
+Storage	Text	64 GB (42 GB free)
+Rooted?	Text	❌ Not Rooted
+Button: Continue	Button	Save specs + proceed
+
+🖼️ SCREEN 4: App Selector
+Purpose: Choose or upload app to check
+
+Element	Type	Description
+Search Bar	Input	Search popular apps (e.g. COD)
+Upload APK	File Picker	Choose .apk file to analyze
+List of Apps	List Cards	Top apps with “Check” button
+Button: Continue	Button	Move to analysis screen
+
+🖼️ SCREEN 5: Compatibility Results
+Purpose: Show app vs. device match
+
+Element	Type	Description
+App Icon + Name	Card Header	e.g. “Genshin Impact”
+Result Box	Status Card	✅ Compatible or ❌ Not Compatible
+Detail Report	Table/List	Compares: RAM, OS, CPU, GPU
+Suggestions Card	Text List	Tweaks, Lite versions, patches
+Buttons (dynamic)	Buttons	Based on result: Install / Fix / Emulate
+
+🖼️ SCREEN 6: Emulation Options
+Purpose: If not compatible, offer runtime environments
+
+Element	Type	Description
+Option 1: Run in VM	Card Btn	Launch VM/Container
+Option 2: Patch APK	Card Btn	Try modifying manifest
+Option 3: Cloud Run	Card Btn	Stream app from cloud (future)
+Notes / Warnings	Text	“Some apps may still crash…”
+
+🖼️ SCREEN 7: Virtual Container / Runtime
+Purpose: Launch the app in an isolated environment
+
+Element	Type	Description
+Container UI	Fullscreen	Fake Android desktop or shell
+App Launcher	Button	Launch selected app in container
+Exit VM	Button	Go back to home
+Performance Bar	Visual	Live RAM/CPU stats (optional)
+
+🖼️ SCREEN 8: Fix Suggestions
+Purpose: Show workaround suggestions
+
+Element	Type	Description
+Lite Version Link	Card Link	Link to alternate APK
+Emulator Recommends	List	Bluestacks / VMOS / F1VM
+Patch Settings	CodeBox	Auto-generated manifest patch
+Community Fix Tips	User List	Votes + tip comments
+
+🖼️ SCREEN 9: Profile / My Apps
+Purpose: User’s dashboard
+
+Element	Type	Description
+Profile Pic	Avatar	Optional login support
+My Device	Card	Your specs
+Recent Checks	List	Compatibility history
+Saved Fixes	Link List	User bookmarks
+
+🖼️ SCREEN 10: Settings
+Element	Type	Description
+Language Switcher	Toggle	Multilingual UI
+Data Permissions	Toggle	Allow analytics / logs
+Developer Mode	Toggle	Shows advanced diagnostics
+Clear Cache	Button	Remove all saved data
+
+💡 DESIGN NOTES
+Use Tailwind-like spacing in styling
+
+Emphasize glassmorphism on result cards & container shell
+
+Icons from Lucide, animations with Framer Motion (for web export), and gradients from UI Gradients
+
